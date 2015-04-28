@@ -1,0 +1,28 @@
+{
+  "name": "cxx-router",
+  "version": "1.0.0",
+  "description": "Lightweight router module for node and browser",
+  "main": "index.js",
+  "scripts": {
+    "test": "./node_modules/mocha/bin/mocha"
+  },
+  "author": "wang zuo <wzuoadjusted@gmail.com> (https://twitter.com/wang_zuo)",
+  "license": "MIT",
+  "devDependencies": {
+    "mocha": "^2.2.4"
+  },
+  "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pqx/cxx-router.git"
+  },
+  "keywords": [
+    "cxx",
+    "router",
+    "browser"
+  ],
+  "bugs": {
+    "url": "https://github.com/pqx/cxx-router/issues"
+  },
+  "homepage": "https://github.com/pqx/cxx-router#readme"
+}
