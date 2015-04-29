@@ -18,3 +18,6 @@ router.match('/article/hello-world');
 // path: '/article/hello-world'
 // fns: [article]
 ```
+
+## Supported browsers
+IE9+
