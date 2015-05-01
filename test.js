@@ -9,13 +9,15 @@ describe('router', function() {
       name: 'hello',
       path: '/hello-world',
       params: {},
-      fns: []
+      fns: [],
+      qs: null
     });
     assert.deepEqual(router.match('/hello-world/'), {
       name: 'hello',
       path: '/hello-world/',
       params: {},
-      fns: []
+      fns: [],
+      qs: null
     });
   });
 
@@ -27,7 +29,8 @@ describe('router', function() {
       name: 'hello',
       path: '/hello-world',
       params: {},
-      fns: [fn]
+      fns: [fn],
+      qs: null
     });
   });
 
@@ -40,7 +43,8 @@ describe('router', function() {
       name: 'hello',
       path: '/hello-world',
       params: {},
-      fns: [fn1, fn2]
+      fns: [fn1, fn2],
+      qs: null
     });
   });
 
@@ -53,7 +57,8 @@ describe('router', function() {
       name: 'hello',
       path: '/hello-world',
       params: {},
-      fns: [fn1, fn2]
+      fns: [fn1, fn2],
+      qs: null
     });
   });
 
@@ -70,7 +75,8 @@ describe('router', function() {
       name: 'article',
       path: '/article/hello-world',
       params: {article: 'hello-world'},
-      fns: []
+      fns: [],
+      qs: null
     });
   });
 
@@ -84,7 +90,8 @@ describe('router', function() {
       params: {
         section: 'sports'
       },
-      fns: []
+      fns: [],
+      qs: null
     });
     assert.deepEqual(router.match('/section/sports/article/hello-world'), {
       name: 'article',
@@ -93,7 +100,20 @@ describe('router', function() {
         section: 'sports',
         article: 'hello-world'
       },
-      fns: []
+      fns: [],
+      qs: null
+    });
+  });
+
+  it('matches with query string', function() {
+    var router = new Router();
+    router.on('search', '/search');
+    assert.deepEqual(router.match('/search?q=test'), {
+      name: 'search',
+      path: '/search',
+      params: {},
+      fns: [],
+      qs: 'q=test'
     });
   });
 });

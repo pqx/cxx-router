@@ -1,6 +1,6 @@
 {
   "name": "cxx-router",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Lightweight router module for node and browser",
   "main": "index.js",
   "scripts": {

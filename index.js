@@ -30,6 +30,10 @@ proto.match = function(path) {
   var routes = this.routes;
   var params = {};
 
+  var ps = path.split('?');
+  path = ps[0];
+  var qs = ps[1] || null;
+
   for(var i = 0, j = routes.length; i < j; i++) {
     var route = routes[i];
     var names = route.names;
@@ -44,7 +48,8 @@ proto.match = function(path) {
         name: route.name,
         path: path,
         params: params,
-        fns: route.fns
+        fns: route.fns,
+        qs: qs
       };
     }
   }
