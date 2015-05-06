@@ -11,12 +11,13 @@ var router = new Router();
 function article() {}
 
 router.on('article', '/article/:article', article);
-router.match('/article/hello-world');
+router.match('/article/hello-world?page=1');
 
 // name: 'article'
 // params: {article: 'hello-world'}
 // path: '/article/hello-world'
 // fns: [article]
+// qs: 'page=1'
 ```
 
 ## Supported browsers
