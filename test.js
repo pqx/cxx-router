@@ -116,4 +116,23 @@ describe('router', function() {
       qs: 'q=test'
     });
   });
+
+  it('helps generate href', function() {
+    var router = new Router();
+    router.on('article', '/article/:id/:article');
+
+    assert.strictEqual(router.href('article', {
+      id: 12312,
+      article: 'tortor-etiam-ornare-fusce-tellus'
+    }), '/article/12312/tortor-etiam-ornare-fusce-tellus');
+
+    assert.strictEqual(router.href('article', {
+      article: 'hello-world'
+    }), '/article//hello-world');
+
+    assert.strictEqual(router.href('article', {
+      id: 123,
+      article: 'hello-world'
+    }, 'page=12'), '/article/123/hello-world?page=12');
+  });
 });

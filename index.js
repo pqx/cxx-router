@@ -1,4 +1,5 @@
 var Router = function() {
+  this._routes = {};
   this.routes = [];
 };
 
@@ -23,6 +24,7 @@ proto.on = function(name, pattern) {
   route.regx = new RegExp('^'+regx+'\/?$');
   route.names = names;
 
+  this._routes[name] = route;
   this.routes.push(route);
 };
 
@@ -55,6 +57,19 @@ proto.match = function(path) {
   }
 
   return {};
+};
+
+proto.href = function(name, params, qs) {
+  var route = this._routes[name];
+  var names = route.names;
+  var pattern = route.pattern;
+
+  var path = pattern.replace(/:\w+/g, function(p) {
+    return params[p.substr(1)] || '';
+  });
+
+  if(qs) return path + '?' + qs;
+  return path;
 };
 
 module.exports = Router;
