@@ -18,10 +18,10 @@ router.match('/article/hello-world?page=1');
 // path: '/article/hello-world'
 // fns: [article]
 // qs: 'page=1'
-```
 
 var href = router.href('article', {article: 'hello-world'}, 'page=1');
 // href: '/article/hello-world?page=1'
+```
 
 ## Supported browsers
 IE9+
