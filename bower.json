@@ -1,0 +1,23 @@
+{
+  "name": "cxx-router",
+  "main": "index.js",
+  "version": "1.1.1",
+  "homepage": "https://github.com/pqx/cxx-router",
+  "authors": [
+    "wang zuo <wzuoadjusted@gmail.com>"
+  ],
+  "description": "Lightweight router module for node and browser",
+  "keywords": [
+    "cxx",
+    "router",
+    "browser"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
