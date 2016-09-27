@@ -9,8 +9,8 @@
   "author": "wang zuo <wzuoadjusted@gmail.com> (https://twitter.com/wang_zuo)",
   "license": "MIT",
   "devDependencies": {
-    "mocha": "^2.2.4",
-    "zuul": "^2.1.1"
+    "mocha": "^3.0.2",
+    "zuul": "^3.11.1"
   },
   "dependencies": {},
   "repository": {
